@@ -38,6 +38,9 @@ class RecentFiles extends StatelessWidget {
                   label: Text("Date"),
                 ),
                 DataColumn(
+                  label: Text("User"),
+                ),
+                DataColumn(
                   label: Text("State"),
                 ),
               ],
@@ -67,6 +70,7 @@ DataRow recentFileDataRow(RecentFile fileInfo) {
         ),
       ),
       DataCell(Text(fileInfo.date!)),
+       DataCell(Text(fileInfo.user!)),
       DataCell(Text(fileInfo.state!)),
     ],
   );

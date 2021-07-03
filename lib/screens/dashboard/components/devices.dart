@@ -50,23 +50,17 @@ class HomeState extends State<Devices> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
         Expanded(
-                    child: ListView(
-            //gridDelegate:
-               // SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1), 
+                    child: ListView( 
             children: <Widget>[
               Expanded(child:Image.asset('images/done.jpg'),
               ),
-           /* SizedBox(
-              height: 20.0,
-            ),*/
-           
          ElevatedButton(
               onPressed:null,
               child: Text('report error'),
             ),
             SizedBox(
-              height: 50.0,
-              width: 50,
+              height: 200,
+              width: 200,
             ),  
              Text(
               'hello',
@@ -77,35 +71,27 @@ class HomeState extends State<Devices> {
                 fontSize: 20.0,
               ),
             ),
-           
             ],
           ),
               ),
-
-              
               Expanded(
               flex: 2,
                child: ListView(
-                 
-                // gridDelegate:
-              //  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1), 
-            children: <Widget>[
-           ///////////////////////////////////////////////      
+            children: <Widget>[      
          Container(
            width: double.maxFinite,
    child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+       children: [
           Text(
             "Recent Requests",
             style: Theme.of(context).textTheme.subtitle1,
           ),
           SizedBox(
-          //  height: 150,
             width: double.infinity,
             child: DataTable2(
               columnSpacing: defaultPadding,
-             minWidth: 600,
+              minWidth: 600,
               columns: [
                 DataColumn(
                   label: Text("Discription"),
@@ -113,26 +99,24 @@ class HomeState extends State<Devices> {
                 DataColumn(
                   label: Text("Date"),
                 ),
-              /*  DataColumn(
+                DataColumn(
                   label: Text("User"),
-                ),*/
+                ),
                 DataColumn(
                   label: Text("State"),
                 ),
               ],
               rows: List.generate(
-               demoRecentFiles.length,
-               (index) => recentFileDataRow(demoRecentFiles[index]),
-             ),
+                demoRecentFiles.length,
+                (index) => recentFileDataRow(demoRecentFiles[index]),
+              ),
             ),
           ),
         ],
       ),
         ),
-        
-  
-     Text(
-              'hello',
+     Text( 
+      'hello',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.green,
