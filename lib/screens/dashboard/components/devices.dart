@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:html';
+
 import 'package:admin/screens/dashboard/components/recent_files.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -47,30 +50,26 @@ class HomeState extends State<Devices> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
         Expanded(
-                    child: GridView(
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3), 
+                    child: ListView(
+            //gridDelegate:
+               // SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1), 
             children: <Widget>[
               Expanded(child:Image.asset('images/done.jpg'),
               ),
-              SizedBox(
+           /* SizedBox(
               height: 20.0,
-            ),
-            Text(
-              'Welcome',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.green,
-                fontWeight: FontWeight.w500,
-                fontSize: 20.0,
-              ),
-            ),
+            ),*/
+           
          ElevatedButton(
               onPressed:null,
               child: Text('report error'),
             ),
+            SizedBox(
+              height: 50.0,
+              width: 50,
+            ),  
              Text(
-              'Welcome',
+              'hello',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.green,
@@ -78,9 +77,7 @@ class HomeState extends State<Devices> {
                 fontSize: 20.0,
               ),
             ),
-            SizedBox(
-              height: 20.0,
-            ),   
+           
             ],
           ),
               ),
@@ -88,10 +85,13 @@ class HomeState extends State<Devices> {
               
               Expanded(
               flex: 2,
-               child: ListView(children: <Widget>[
+               child: ListView(
+                 
+                // gridDelegate:
+              //  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1), 
+            children: <Widget>[
            ///////////////////////////////////////////////      
          Container(
-           height: double.maxFinite,
            width: double.maxFinite,
    child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,10 +101,11 @@ class HomeState extends State<Devices> {
             style: Theme.of(context).textTheme.subtitle1,
           ),
           SizedBox(
+          //  height: 150,
             width: double.infinity,
             child: DataTable2(
               columnSpacing: defaultPadding,
-              minWidth: 600,
+             minWidth: 600,
               columns: [
                 DataColumn(
                   label: Text("Discription"),
@@ -112,6 +113,9 @@ class HomeState extends State<Devices> {
                 DataColumn(
                   label: Text("Date"),
                 ),
+              /*  DataColumn(
+                  label: Text("User"),
+                ),*/
                 DataColumn(
                   label: Text("State"),
                 ),
@@ -125,9 +129,18 @@ class HomeState extends State<Devices> {
         ],
       ),
         ),
-/////////////////////////////////////////////////////////
-
-       
+        
+  
+     Text(
+              'hello',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.green,
+                fontWeight: FontWeight.w500,
+                fontSize: 20.0,
+              ),
+            ),
+           
         ],
         ),   
       ),
