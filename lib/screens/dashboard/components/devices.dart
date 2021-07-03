@@ -75,7 +75,7 @@ class HomeState extends State<Devices> {
           ),
               ),
               Expanded(
-              flex: 2,
+              flex: 3,
                child: ListView(
             children: <Widget>[      
          Container(
