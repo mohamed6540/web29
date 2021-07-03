@@ -22,11 +22,15 @@ class SideMenu extends StatelessWidget {
               Navigator.of(context).pushNamed('departments');
             },
           ),
+          //////////////////////////////////////////
           DrawerListTile(
             title: "Task",
             svgSrc: "assets/icons/menu_task.svg",
-            press: () {},
+            press: () {
+              Navigator.of(context).pushNamed('devices');
+            },
           ),
+          ///////////////////////////////////
           DrawerListTile(
             title: "Documents",
             svgSrc: "assets/icons/menu_doc.svg",

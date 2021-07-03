@@ -40,7 +40,7 @@ dependencies:
   provider: ^5.0.0
   data_table_2: ^2.0.3
   image_form_field: ^0.0.2
-  image_picker: ^0.4.12+1
+  #image_picker: ^0.4.12+1
   firebase_image: ^1.0.1
   firebase_storage: ^8.1.3
 

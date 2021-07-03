@@ -3,6 +3,7 @@ import 'package:admin/controllers/MenuController.dart';
 import 'package:admin/login.dart';
 import 'package:admin/registration.dart';
 import 'package:admin/screens/dashboard/components/departments.dart';
+import 'package:admin/screens/dashboard/components/devices.dart';
 import 'package:admin/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -41,7 +42,8 @@ class MyApp extends StatelessWidget {
           Registration.id: (context) => Registration(),
           Login.id: (context) => Login(),
           MainScreen.id: (context) => MainScreen(),
-          Departments.id: (context) =>Departments()
+          Departments.id: (context) =>Departments(),
+          Devices.id: (context) =>Devices()
         });
   }
 }
